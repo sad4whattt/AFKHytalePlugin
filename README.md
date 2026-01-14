@@ -27,7 +27,40 @@ Type `/afk` to mark yourself as away. Everyone will see: **"YourName is now afk!
 
 Your chat messages will show the `[AFK]` prefix until you send a message, which automatically removes your AFK status and announces: **"⚡ YourName is no longer AFK"**
 
+## ⚠️ Important: Permissions Setup
+
+By default, Hytale prevents non-Operators from using slash commands. For regular players to use this plugin, you **must** add the permission node to your server's `permissions.json` file.
+
+**Note:** You must **STOP** your server before editing this file, or it may reset your changes.
+
+### Configuration
+Locate `permissions.json` in your server root and add the permission string to the `default` group list.
+
+**Correct Syntax:**
+Ensure you use a **List `[]`**, not an Object `{}`.
+
+```json
+{
+  "users": {
+    "123": {
+      "groups": [
+        "Adventure"
+      ]
+    }
+  },
+  "groups": {
+    "default": [
+      "snipr.afkplugin.*"
+    ],
+    "Adventure": [
+       "snipr.afkplugin.*"
+    ]
+  }
+}
+```
+
 ## Author
 
 Created by **Snipr**
+
 
