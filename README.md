@@ -2,6 +2,9 @@
 
 A simple AFK (Away From Keyboard) status plugin for Hytale servers.
 
+## Check us out
+[Snipr](https://hytale.snipr.me/)
+
 ## Features
 
 - **`/afk` command** - Toggle your AFK status
@@ -27,3 +30,4 @@ Your chat messages will show the `[AFK]` prefix until you send a message, which 
 ## Author
 
 Created by **Snipr**
+
