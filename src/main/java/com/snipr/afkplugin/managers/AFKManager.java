@@ -8,9 +8,6 @@ import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Manages AFK status for players.
- */
 public class AFKManager {
     
     private final Set<String> afkPlayers = new HashSet<>();
@@ -25,11 +22,9 @@ public class AFKManager {
         String username = playerRef.getUsername();
         
         if (afkPlayers.contains(username)) {
-            // Remove AFK
             afkPlayers.remove(username);
             return false;
         } else {
-            // Set AFK
             afkPlayers.add(username);
             return true;
         }
@@ -43,11 +38,9 @@ public class AFKManager {
      */
     public boolean toggleAFKByUsername(String username) {
         if (afkPlayers.contains(username)) {
-            // Remove AFK
             afkPlayers.remove(username);
             return false;
         } else {
-            // Set AFK
             afkPlayers.add(username);
             return true;
         }
@@ -65,7 +58,6 @@ public class AFKManager {
         if (afkPlayers.contains(username)) {
             afkPlayers.remove(username);
             
-            // Announce return to all players
             broadcastReturn(username);
             return true;
         }
@@ -94,7 +86,6 @@ public class AFKManager {
             Message.raw(" is now afk!").color(Color.GREEN)
         );
         
-        // Send to all online players
         Universe.get().getDefaultWorld().execute(() -> {
             Universe.get().getDefaultWorld().getPlayers().forEach(player -> {
                 player.sendMessage(afkMessage);
@@ -114,7 +105,6 @@ public class AFKManager {
             Message.raw(" is no longer AFK").color(Color.GRAY)
         );
         
-        // Send to all online players
         Universe.get().getDefaultWorld().execute(() -> {
             Universe.get().getDefaultWorld().getPlayers().forEach(player -> {
                 player.sendMessage(returnMessage);

@@ -36,13 +36,10 @@ public class AFKPlugin extends JavaPlugin {
     protected void setup() {
         System.out.println("[Snipr AFKPlugin] Loading...");
         
-        // Initialize AFK manager
         afkManager = new AFKManager();
         
-        // Register command
         this.getCommandRegistry().registerCommand(new AFKCommand(afkManager));
         
-        // Register chat event listener
         this.getEventRegistry().registerGlobal(PlayerChatEvent.class, AFKChatListener::onPlayerChat);
         
         System.out.println("[Snipr AFKPlugin] Loaded successfully!");
