@@ -41,26 +41,23 @@ Ensure you use a **List `[]`**, not an Object `{}`.
 
 ```json
 {
-  "users": {
-    "123": {
-      "groups": [
-        "Adventure"
-      ]
-    }
-  },
   "groups": {
+    "Default": [],
+    "OP": [
+      "*"
+    ],
     "default": [
-      "snipr.afkplugin.*"
+      "snipr.afkplugin.*",
     ],
     "Adventure": [
-       "snipr.afkplugin.*"
+      "snipr.afkplugin.*",
     ]
   }
-}
 ```
 
 ## Author
 
 Created by **Snipr**
+
 
 
