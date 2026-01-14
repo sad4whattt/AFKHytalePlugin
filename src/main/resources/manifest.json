@@ -1,0 +1,8 @@
+{
+  "Group": "Snipr",
+  "Name": "AFKPlugin",
+  "Version": "1.0.0",
+  "Main": "com.snipr.afkplugin.AFKPlugin",
+  "Description": "Allows players to mark themselves as AFK with automatic return detection",
+  "IncludesAssetPack": false
+}
